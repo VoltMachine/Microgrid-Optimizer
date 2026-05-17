@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root { height: 100%; }
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.35);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover { background: rgba(100, 116, 139, 0.6); }
+
+/* Range slider — light + dark */
+input[type='range'] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  background: transparent;
+}
+input[type='range']::-webkit-slider-runnable-track {
+  height: 4px;
+  background: rgb(203 213 225);
+  border-radius: 9999px;
+}
+.dark input[type='range']::-webkit-slider-runnable-track {
+  background: rgb(51 65 85);
+}
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: -6px;
+  height: 16px;
+  width: 16px;
+  border-radius: 9999px;
+  background-color: #3b82f6;
+  border: 2px solid white;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(59, 130, 246, 0.4);
+  transition: transform 0.1s ease;
+}
+.dark input[type='range']::-webkit-slider-thumb {
+  border-color: #0f172a;
+}
+input[type='range']::-webkit-slider-thumb:hover { transform: scale(1.15); }
+input[type='range']::-moz-range-track {
+  height: 4px;
+  background: rgb(203 213 225);
+  border-radius: 9999px;
+}
+.dark input[type='range']::-moz-range-track {
+  background: rgb(51 65 85);
+}
+input[type='range']::-moz-range-thumb {
+  height: 16px;
+  width: 16px;
+  border-radius: 9999px;
+  background-color: #3b82f6;
+  border: 2px solid white;
+  cursor: pointer;
+}
+
+/* Recharts tooltip — theme aware */
+.recharts-default-tooltip {
+  background-color: rgba(255, 255, 255, 0.98) !important;
+  border: 1px solid rgba(226, 232, 240, 0.9) !important;
+  border-radius: 10px !important;
+  padding: 10px 12px !important;
+  font-size: 12px !important;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12) !important;
+  color: #0f172a !important;
+}
+.recharts-tooltip-label { color: #0f172a !important; font-weight: 600; }
+.recharts-tooltip-item { color: #334155 !important; }
+.dark .recharts-default-tooltip {
+  background-color: rgba(15, 23, 42, 0.95) !important;
+  border: 1px solid rgba(51, 65, 85, 0.6) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4) !important;
+  color: #e2e8f0 !important;
+}
+.dark .recharts-tooltip-label { color: #e2e8f0 !important; }
+.dark .recharts-tooltip-item { color: #cbd5e1 !important; }
+
+/* Hidden number input arrows */
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type='number'] { -moz-appearance: textfield; }
+
+/* Leaflet — dark-mode tweaks + transparent marker container */
+.leaflet-container {
+  font-family: 'Inter', system-ui, sans-serif;
+  border-radius: 0.75rem;
+}
+.cust-marker { background: transparent !important; border: none !important; }
+.dark .leaflet-control-zoom a {
+  background-color: rgba(15, 23, 42, 0.95) !important;
+  color: #e2e8f0 !important;
+  border-color: rgba(51, 65, 85, 0.6) !important;
+}
+.dark .leaflet-control-zoom a:hover {
+  background-color: rgba(30, 41, 59, 1) !important;
+}
+.dark .leaflet-control-attribution {
+  background-color: rgba(15, 23, 42, 0.85) !important;
+  color: #94a3b8 !important;
+}
+.dark .leaflet-control-attribution a { color: #cbd5e1 !important; }
