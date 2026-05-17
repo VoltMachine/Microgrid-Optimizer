@@ -384,7 +384,7 @@ const DICT = {
   'tuto.step':                     { fr: 'Étape',                           en: 'Step' },
 
   // ── Methodology ────────────────────────────────────────────────────────
-  'methodo.title':                 { fr: 'Comment ça marche ?',             en: 'How it works ?' },
+  'methodo.title':                 { fr: 'Comment ça marche',             en: 'How it works' },
   'methodo.p1':                    { fr: 'Le modèle repose sur une <strong>programmation linéaire continue (LP)</strong> résolue via le solveur open-source <strong>CBC</strong> (Coin-or Branch and Cut), interfacé par la bibliothèque Python <strong>PuLP</strong>. Toutes les variables sont réelles — il n\'y a pas de variables binaires ou entières, ce qui garantit une résolution rapide et un optimum global.', en: 'The model is based on <strong>continuous linear programming (LP)</strong> solved via the open-source <strong>CBC</strong> solver (Coin-or Branch and Cut), interfaced by the <strong>PuLP</strong> Python library. All variables are real — there are no binary or integer variables, ensuring fast resolution and a global optimum.' },
 
   // ── Code modal ────────────────────────────────────────────────────────
