@@ -19,7 +19,7 @@ export default function Methodology({ open, onClose }) {
       {/* ═══════════════════════════════════════════════════════════════════════
           SOMMAIRE
           ═══════════════════════════════════════════════════════════════════ */}
-      <H2 className="break-words hyphens-auto">{FR ? 'Sommaire' : 'Table of contents'}</H2>
+      <H2>{FR ? 'Sommaire' : 'Table of contents'}</H2>
       <UL>
         <LI>1. {FR ? 'Architecture du code' : 'Code architecture'}</LI>
         <LI>2. {FR ? 'Architecture temporelle' : 'Temporal architecture'} — 288h / 672h / 8760h</LI>
